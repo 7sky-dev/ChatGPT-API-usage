@@ -1,0 +1,16 @@
+body{
+    background-color: #111111 !important;
+}
+
+#responses_container{
+    color: white;
+}
+
+.response{
+    background-color: #0069d9;
+}
+
+.response > h3{
+    border-bottom: 1px solid #111111;
+    font-style: italic;
+}

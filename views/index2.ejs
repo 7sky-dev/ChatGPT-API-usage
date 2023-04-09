@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Artificial intelligence</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container d-flex flex-column align-items-center">
+        <div class="form-group w-50 mt-4">
+            <form action="/ask" class="d-flex flex-row">
+                <input name="question"  type="text" class="form-control" id="usr" placeholder="Ask me anything">
+                <input type="submit" class="btn btn-primary ml-1" value="Ask">
+            </form>
+            <form action="/clear" class="d-flex flex-row justify-content-center align-items-center mt-1">
+                <input type="submit" class="btn btn-danger ml-1 w-50" value="Clear">
+            </form>
+        </div>
+        <div id="responses_container">
+            <% for(let i=0; i<data.length; i++){ %>
+
+            <div class="response p-3 mt-3 rounded">
+                <h3 class="pb-2"><%= data[i].question %></h3>
+                <div class="text-wrap"><%= data[i].answer %></div>
+            </div>
+
+            <% } %>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
